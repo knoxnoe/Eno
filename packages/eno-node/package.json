@@ -1,10 +1,12 @@
 {
   "name": "@enoone/eno",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
-  "bin": "./bin/cli.js",
+  "bin": {
+    "eno": "./dist/cli.js"
+  },
   "files": [
     "dist"
   ],
@@ -23,5 +25,9 @@
     "rollup": "^4.36.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
