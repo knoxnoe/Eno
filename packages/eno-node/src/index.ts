@@ -1,5 +1,7 @@
-const add = (a: number, b: number) => {
-    return a + b;
-}
+import { program } from "commander";
 
-export { add }
+program
+  .option("--no-sauce", "Remove sauce")
+  .option("--cheese <flavour>", "cheese flavour", "mozzarella")
+  .option("--no-cheese", "plain with no cheese")
+  .parse();

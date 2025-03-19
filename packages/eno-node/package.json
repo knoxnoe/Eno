@@ -3,12 +3,12 @@
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "bin": {
-    "eno": "./dist/cli.js"
+    "eno": "./bin/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "scripts": {
     "build": "rm -rf dist && rollup -c"

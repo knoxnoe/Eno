@@ -4,14 +4,14 @@ export default {
   input: "./src/index.ts",
   output: [
     {
-      file: 'dist/cli.js',
+      file: 'dist/cli.mjs',
       format: 'cjs',
       exports: 'named'
     },
-    {
-      file: 'dist/bundle.esm.js',
-      format: 'esm'
-    }
+    // {
+    //   file: 'dist/bundle.esm.js',
+    //   format: 'esm'
+    // }
   ],
   plugins: [typescript()]
 }
