@@ -16,36 +16,22 @@ const generateSelectOptions = (path: string) => {
       value: "npm",
       description: "npm is the most popular package manager",
     },
-    {
-      name: "yarn",
-      value: "yarn",
-      description: "yarn is an awesome package manager",
-    },
-    {
-      name: "jspm",
-      value: "jspm",
-      disabled: true,
-    },
-    {
-      name: "pnpm",
-      value: "pnpm",
-      disabled: "(pnpm is not available)",
-    },
   ];
 };
 
-const selectEndFile = async () => {
-  let file = ""
+const selectEndFile = async (dirPath: string) => {
+  let _filePath = ""
+  let _tempDirPath = dirPath;
 
-  while(!file) {
+  while(!_filePath) {
     try {
       const filePath = await select({
         message: "Select a package manager",
-        choices: generateSelectOptions(),
+        choices: generateSelectOptions(_tempDirPath),
       });
   
       if(fse.statSync(filePath).isFile()) {
-        file = filePath;
+        _filePath = filePath;
       }
     } catch(err) {
       break;
