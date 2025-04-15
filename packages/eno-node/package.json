@@ -13,7 +13,7 @@
     "resource"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c"
+    "build": "rm -rf dist && nx build -c"
   },
   "keywords": [],
   "author": "Eno Cyrus",
