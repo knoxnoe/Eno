@@ -11,8 +11,8 @@ const getDirname = (metaUrl: string) => {
 const getAllDirsAndFiles = async (absolutePath: string) => {
   fse
     .readdir(absolutePath)
-    .then((files) => {
-      const promises = files.map((file) => {
+    .then( async (files) => {
+      const promises = files.map( async (file) => {
         const filePath = join(absolutePath, file);
         return fse.stat(filePath).then((stat) => {
           return {
