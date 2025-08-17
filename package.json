@@ -9,15 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "private": true,
-  "packageManager": "pnpm@10.8.0",
-  "devDependencies": {
-    "@nx/eslint": "20.8.0",
-    "@nx/rollup": "20.8.0",
-    "eslint": "~8.57.0",
-    "nx": "20.8.0",
-    "rollup": "^4.14.0"
-  },
-  "nx": {},
-  "dependencies": {}
+  "packageManager": "pnpm@10.8.0"
 }
